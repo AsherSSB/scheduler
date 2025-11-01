@@ -1,7 +1,7 @@
-export default function Home() {
+import { MainMenu } from './MainMenu'
+
+export default function App() {
   return (
-    <main className="w-screen h-screen bg-neutral-800">
-      <div className="font-bold text-gray-100">gg sans</div>
-    </main>
+    <MainMenu />
   );
 }
