@@ -1,7 +1,26 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import localFont from 'next/font/local'
 
-const inter = Inter({ subsets: ["latin"] });
+const defaultFont = localFont({
+  src: [
+    {
+      path: './fonts/gg-sans-Regular.ttf',
+      weight: '400'
+    },
+    {
+      path: './fonts/gg-sans-Medium.ttf',
+      weight: '500'
+    },
+    {
+      path: './fonts/gg-sans-Semibold.ttf',
+      weight: '600'
+    },
+    {
+      path: './fonts/gg-sans-Bold.ttf',
+      weight: '700'
+    }
+  ]
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -14,8 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={defaultFont.className}>
+      <body>{children}</body>
     </html>
   );
 }

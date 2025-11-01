@@ -1,8 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
-
 export default function Home() {
   return (
-    <div></div>
+    <main className="w-screen h-screen bg-neutral-800">
+      <div className="font-bold text-gray-100">gg sans</div>
+    </main>
   );
 }
